@@ -1,4 +1,4 @@
-// In App.js in a new project
+// Importando bibliotecas e componentes necessários
 
 import * as React from 'react';
 import { View, Text , StyleSheet,TouchableOpacity} from 'react-native';
@@ -7,13 +7,18 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Camera from './camera/'
 import Location from './location/'
 
+// Criando o stack navigator
+
 const Stack = createNativeStackNavigator();
+
+// Função que define a tela inicial (HomeScreen)
 
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={{color:'white', fontSize:50}}>Home </Text>
       <Text style={{color:'#a7b8c2', fontSize:18,marginTop:10}}>Bem-vindo ao Kaiduchard</Text>
+
       <TouchableOpacity
         style={styles.button}
         title="Camera"
@@ -32,6 +37,9 @@ function HomeScreen({ navigation }) {
     </View>
   );
 }
+
+// Função principal do aplicativo
+
 
 function App() {
   return (
